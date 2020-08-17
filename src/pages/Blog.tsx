@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import { pageUrl } from '../router';
 import { BlogItem } from '../components';
 import { blogPost } from '../database/blogPostMockData';
 
 export default function Blog() {
+  const storeObject = useSelector((state) => state);
+  console.log(storeObject);
 
   return (
     <div className="page-content">
